@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_school_exam_form" model="ir.ui.view">
+      <field name="name">view.school.exam.form</field>
+       <field name="model">school.exam</field>
+
+      <field name="arch" type="xml" >
+         <form name="school exam form">
+                    <sheet>
+                    <div exam="oe_title">
+                    <label for="name" exam="oe_edit_only" />
+                   <h1>
+                    <field name="name"   placeholder="name"/>
+                   
+                   </h1>
+                    
+                    </div>
+                    <group>
+                    <field name="exam_class" placeholder="exam class" />
+                    <field name="start_exam" placeholder="start exam" />
+                    <field name="end_exam" placeholder="end exam" />
+                     <field name="students" placeholder="students" />
+                    </group>
+                   </sheet>
+   
+         </form>
+
+      </field>
+    </record>
+      <record id="view_school_exam_tree" model="ir.ui.view">
+      <field name="name">view.school.exam.tree</field>
+             <field name="model">school.exam</field>
+              <field name="arch" type="xml" >
+
+              <tree string="school  exam tree">
+              
+            
+                
+                    <field name="name"  />
+            <field name="exam_class" />
+                    <field name="start_exam" />
+                    <field name="end_exam" />
+                    <field name="students" />
+        
+              </tree>
+
+      </field>
+    </record>
+    <record id="action_school_exam" model="ir.actions.act_window">
+              <field name="name">school exam</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.exam</field>
+            <field name="view_mode">tree,form</field>
+           
+    </record>
+
+                  <menuitem id="menu_school_exam" name="exams" parent="menu_school_root" sequence="4"/>
+        <!-- This Menu Item must have a parent and an action -->
+
+
+        <menuitem id="menu_school_exam_action" name="school exam" parent="menu_school_exam" action="action_school_exam" sequence="4"/>
+
+    
+    
+  </data>
+</odoo>

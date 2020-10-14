@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_school_mark_form" model="ir.ui.view">
+      <field name="name">view.school.mark.form</field>
+       <field name="model">school.mark</field>
+
+      <field name="arch" type="xml" >
+         <form name="school mark form">
+                    <sheet>
+               
+                    <group>
+                    <field name="student" placeholder="student" />
+                    <field name="mark" placeholder=" mark" />
+               >
+                    </group>
+                   </sheet>
+   
+         </form>
+
+      </field>
+    </record>
+      <record id="view_school_mark_tree" model="ir.ui.view">
+      <field name="name">view.school.mark.tree</field>
+             <field name="model">school.mark</field>
+              <field name="arch" type="xml" >
+
+              <tree string="school  mark tree">
+              
+            
+                
+            <field name="student" />
+                    <field name="mark" />
+              
+        
+              </tree>
+
+      </field>
+    </record>
+    <record id="action_school_mark" model="ir.actions.act_window">
+              <field name="name">school mark</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.mark</field>
+            <field name="view_mode">tree,form</field>
+           
+    </record>
+
+       
+
+    
+    
+  </data>
+</odoo>
